@@ -2,7 +2,7 @@ const express =require("express")
 const { sendemailController } = require("./Controller")
 const routes=express.Router()
 
-routes.get("/sendMail",sendemailController)
+routes.post("/sendMail",sendemailController)
 
 
 
