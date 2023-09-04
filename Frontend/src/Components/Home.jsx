@@ -55,7 +55,7 @@ export default function Home() {
   If you have any questions or need further assistance, please feel free to contact our support team at zealyug.support@gmail.com.
 
   Best regards,
-  [name]
+  {name}
   amankashyap0246@gmail.com`)
   return (
     <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '85vh', marginTop: '3rem' }}>
