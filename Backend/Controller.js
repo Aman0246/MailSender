@@ -43,4 +43,14 @@ const sendemailController = async (req, res) => {
 
 
 
-module.exports = { sendemailController };
+
+
+const allmails = async(req,res) => {
+  try {
+    let allMails=await  emailModel.find();
+    return res.send({status:true,message:"All Mails",data:allMails})
+  } catch (error) {
+    return res.send({status:false,message:"Something Went wrong"})
+  }
+}
+module.exports = { sendemailController,allmails };

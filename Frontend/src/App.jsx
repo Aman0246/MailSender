@@ -3,14 +3,18 @@ import './App.css'
 import Home from './Components/Home';
 import Header from './Components/Navbar';
 import {Routes,Route }  from 'react-router-dom'
+import Allmails from './Components/Allmails';
+import { useState } from 'react';
 function App() {
-  axios.defaults.baseURL = 'http://localhost:7000/';
-
+  axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+const[dark,setdark] = useState(true)
   return (
     <>
-    <Header></Header>
+    <Header dark={dark} setdark={setdark}></Header>
     <Routes>
-      <Route path='/' element={<Home/>}/>
+      <Route path='/' element={<Home dark={dark} setdark={setdark}/>}/>
+      <Route path='/allmails' element={<Allmails dark={dark} setdark={setdark}/>}/>
+     
     </Routes>
 
     </>

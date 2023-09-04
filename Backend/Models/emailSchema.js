@@ -7,6 +7,6 @@ const emailSchema=new mongoose.Schema({
     name:{type:String},
     subject:{type:String},
     message:{type:String}
-})
+},{timestamps:true})
 const emailModel =new mongoose.model("emailModel",emailSchema)
 module.exports={emailModel}
