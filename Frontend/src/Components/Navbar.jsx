@@ -12,7 +12,7 @@ export default function Navbar({dark,setdark}) {
       };
     return (
         <Box sx={{ color: "black" }}>
-            <AppBar sx={{ bgcolor: dark?'#e8e8e8':'#160f4f', color: dark?"black":'white', height: '50px' }}>
+            <AppBar sx={{ bgcolor: dark?'#e8e8e8':'#180f69', color: dark?"black":'white', height: '50px' }}>
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
 
                     <Box title="Gmail" sx={{ display: 'flex', alignItems: 'center' }}>
