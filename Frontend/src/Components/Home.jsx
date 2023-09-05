@@ -106,10 +106,6 @@ export default function Home({dark,setdark}) {
             />
         <LoadingButton loading={buttonLoding} onClick={handleSubmit} variant="contained">Send</LoadingButton>
         </Box>
-
-
-
-
       </Box>
     </motion.div>
             </Box>
