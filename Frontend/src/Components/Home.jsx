@@ -88,13 +88,13 @@ export default function Home({dark,setdark}) {
     <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',height:'100vh',width:'100%'}}>
 
     <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} style={{ display: 'flex',backgroundColor:dark?"":'rgb(13 5 77)',width:'100%',height:'100%', justifyContent: 'center',paddingTop:"1rem", alignItems: 'center', marginTop: '3rem' }}>
-      <Box sx={{ '@media (max-width: 400px)': { fontSize: '10px', width: '95%' }, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', border: '2px solid gray', height: '80%', padding: '1rem', borderRadius: '10px', display: 'flex', flexDirection: 'column', width: '50%', gap: '1rem' }}>
-        <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <Box sx={{ '@media (max-width: 400px)': { fontSize: '10px', width: '95%' }, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', border: '2px solid gray', padding: '1rem', borderRadius: '10px', display: 'flex', flexDirection: 'column', width: '50%', gap: '1rem' }}>
+        <Box sx={{  display: 'flex', flexDirection: 'column' }}>
           <TextField onChange={handleChange} name='name' type='email' sx={{ fontSize: '8px', flex: 1,"& > label":{color:dark?"black":'white'},"& > div>input":{color:dark?"black":'#8b8a8a'}}} id="standard-basic" label="Name" variant="standard" />
           <TextField onChange={handleChange}  name='email' sx={{ flex: 1,"& > label":{color:dark?"black":'white'},"& > div>input":{color:dark?"black":'#8b8a8a'} }} id="standard-basic" label="Email" type='email' variant="standard" />
           <TextField onChange={handleChange} name='subject' sx={{ flex: 1,"& > label":{color:dark?"black":'white'},"& > div>input":{color:dark?"black":'#8b8a8a'} }} id="standard-basic" type='email' label="Subject" variant="standard" />
         </Box>
-        <Box sx={{ flex: 5, display: 'flex' }}>
+        <Box sx={{  display: 'flex',flexDirection:'column',gap:"1rem" }}>
           <TextField onChange={(e) => setMessage(e.target.value)} sx={{ flex: 4,"& > label":{color:dark?"black":'#008eff'},"& > div >textarea":{color:dark?"black":'#8b8a8a'} }}
             name='message'
             id="standard-multiline-static"
@@ -104,11 +104,11 @@ export default function Home({dark,setdark}) {
             value={message}
             variant="standard"
             />
+        <LoadingButton loading={buttonLoding} onClick={handleSubmit} variant="contained">Send</LoadingButton>
         </Box>
 
 
 
-        <LoadingButton loading={buttonLoding} onClick={handleSubmit} variant="contained">Send</LoadingButton>
 
       </Box>
     </motion.div>
