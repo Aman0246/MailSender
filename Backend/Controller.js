@@ -1,4 +1,4 @@
-//hellow
+
 const nodemailer = require("nodemailer");
 const { emailModel } = require("./Models/emailSchema");
 require("dotenv").config();
